@@ -1,38 +1,164 @@
 .App {
-  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1d1d1f;
+  margin: 0;
+}
+
+.add-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: all 0.2s ease;
+}
+
+.add-card:hover {
+  background: #f5f5f7;
+}
+
+.add-icon {
+  font-size: 24px;
+  color: #0071e3;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1d1d1f;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #0071e3;
+}
+
+.submit-button {
+  background: #0071e3;
   color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:hover {
+  background: #0077ed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App h1 {
+  color: #333;
+  margin-bottom: 30px;
 }
+
+.apple-card-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px 24px 0 24px;
+  box-sizing: border-box;
+}
+
+.apple-create-btn {
+  display: block;
+  width: 100%;
+  margin: 32px 0 0 0;
+  padding: 16px 0;
+  background: #0071e3;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.apple-create-btn:hover {
+  background: #005bb5;
+}
+
+.apple-create-btn--centered {
+  display: block;
+  width: 200px;
+  margin: 32px auto 0 auto;
+  padding: 16px 0;
+  background: #0071e3;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.apple-create-btn--centered:hover {
+  background: #005bb5;
+}
+
+@media (max-width: 600px) {
+  .apple-card-wrapper {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24px 10px 0 10px;
+  }
+  .apple-create-btn {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 16px;
+    margin: 0;
+    z-index: 100;
+    max-width: none;
+  }
+} 

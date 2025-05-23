@@ -1,0 +1,96 @@
+.apple-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 100%;
+  min-height: 120px;
+  transition: box-shadow 0.2s;
+  box-sizing: border-box;
+  /* Отступы по умолчанию */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.apple-card + .apple-card {
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .apple-card {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 24px 10px;
+    max-width: 100%;
+  }
+}
+
+.apple-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 12px 0;
+  text-align: left;
+  letter-spacing: -0.01em;
+}
+
+.apple-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.apple-card-number {
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+}
+
+.apple-card-delete {
+  background: none;
+  border: none;
+  color: #ff3b30;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+
+.apple-card-delete:hover {
+  color: #b71c1c;
+}
+
+.apple-card-fields {
+  margin-top: 16px;
+}
+
+.apple-card-field {
+  margin-bottom: 14px;
+}
+
+.apple-card-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #1d1d1f;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.apple-card-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fafafc;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.apple-card-field input:focus {
+  outline: none;
+  border-color: #0071e3;
+} 
