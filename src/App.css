@@ -1,14 +1,18 @@
 .App {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 100vh;
+  background: #f5f5f7;
 }
 
 .card {
   background: white;
   border-radius: 12px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -99,8 +103,16 @@
   max-width: 500px;
   margin: 0 auto;
   width: 100%;
-  padding: 32px 24px 0 24px;
+  padding: 32px 0 0 0;
   box-sizing: border-box;
+}
+
+.apple-card-wrapper > div {
+  margin-bottom: 10px;
+}
+
+.apple-card-wrapper > div:last-child {
+  margin-bottom: 0;
 }
 
 .apple-create-btn {
@@ -126,8 +138,8 @@
 
 .apple-create-btn--centered {
   display: block;
-  width: 200px;
-  margin: 32px auto 0 auto;
+  width: 100%;
+  margin: 32px 0 0 0;
   padding: 16px 0;
   background: #0071e3;
   color: #fff;
@@ -145,20 +157,109 @@
   background: #005bb5;
 }
 
+.section-placeholder {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+.modal-window {
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  padding: 24px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.modal-window h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: #1d1d1f;
+}
+
+.modal-window .apple-card-field {
+  margin-bottom: 20px;
+}
+
+.modal-window .apple-card-field label {
+  display: block;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.modal-window .apple-card-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fafafc;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.modal-window .apple-card-field input:focus {
+  outline: none;
+  border-color: #0071e3;
+}
+
 @media (max-width: 600px) {
+  .App {
+    padding: 20px 39px;
+  }
+  
   .apple-card-wrapper {
     max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 24px 10px 0 10px;
+    margin: 0;
+    padding: 24px 0 0 0;
   }
+  
   .apple-create-btn {
     position: fixed;
-    left: 10px;
-    right: 10px;
+    left: 39px;
+    right: 39px;
     bottom: 16px;
     margin: 0;
     z-index: 100;
+    max-width: none;
+  }
+
+  .modal-backdrop {
+    padding-top: 0;
+  }
+
+  .modal-window {
+    margin: 0;
+    border-radius: 16px 16px 0 0;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     max-width: none;
   }
 } 
